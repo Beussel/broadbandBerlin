@@ -14,6 +14,7 @@
 		3305090420B9AE4000AA5E30 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3305090320B9AE4000AA5E30 /* DetailTableViewController.swift */; };
 		3305090620B9B8F400AA5E30 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3305090520B9B8F400AA5E30 /* MapViewController.swift */; };
 		337C0F3920BC1ACA00F54897 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337C0F3820BC1ACA00F54897 /* NetworkManager.swift */; };
+		33F5E7A220BEEDAD00DAF08A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5E7A120BEEDAD00DAF08A /* Result.swift */; };
 		33FA883820BEBB35003E786D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FA883720BEBB35003E786D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		3305090320B9AE4000AA5E30 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		3305090520B9B8F400AA5E30 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		337C0F3820BC1ACA00F54897 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		33F5E7A120BEEDAD00DAF08A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		33FA883720BEBB35003E786D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 		337C0F3520BC155600F54897 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				33F5E7A120BEEDAD00DAF08A /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F5E7A220BEEDAD00DAF08A /* Result.swift in Sources */,
 				3305090420B9AE4000AA5E30 /* DetailTableViewController.swift in Sources */,
 				3305090220B9AAA400AA5E30 /* BezirkTableViewController.swift in Sources */,
 				337C0F3920BC1ACA00F54897 /* NetworkManager.swift in Sources */,
