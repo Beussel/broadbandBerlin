@@ -32,8 +32,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         manager.startUpdatingLocation()
         mapView.userTrackingMode = .follow
         self.mapView.camera.altitude = 10000
-        
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -41,7 +39,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             CLGeocoder().reverseGeocodeLocation(manager.location!) { (placemarks, error) in
                 if let placemarks = placemarks, let placemarkFirst = placemarks.first,  error == nil {
                     self.bezirk =  (placemarkFirst.subLocality ?? placemarkFirst.locality) ?? ""
-                    self.buttonBezirk.setTitle(self.bezirk, for: .normal)
+                    // GeoCoder gibt für den Bezirk 'Mitte' 'City Centre' zurück, daher mappen wier diese
+                    self.bezirk = self.bezirk == "City Centre" ? "Mitte" : self.bezirk
+                    self.buttonBezirk.setTitle(self.bezirk , for: .normal)
+                    self.buttonBezirk.titleLabel?.numberOfLines = 1
+                    self.buttonBezirk.titleLabel?.adjustsFontSizeToFitWidth = true
                     self.firstTime = false
                     self.buttonBezirk.isEnabled = true
                 }

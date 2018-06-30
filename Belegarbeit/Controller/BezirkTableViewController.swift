@@ -12,6 +12,7 @@ class BezirkTableViewController: UITableViewController {
     let networkManager = NetworkManager()
     var bezirk: String = ""
     var result: Result?
+    var dict: [String: [Item]] = [:]
     
     var finalArray = [[Item]]()
  
@@ -38,12 +39,13 @@ class BezirkTableViewController: UITableViewController {
     
     func sortieren() {
         var list = [String]()
-        guard let resultIndex = result?.index else { return }
-        for item in resultIndex{
+        //Duplikate entfernen, da die Api Duplikate verschickt
+        let array = Array(Set<Item>(result?.index ?? []))
+        for item in array{
             if list.contains(item.bzrname){
                 continue
             }
-            finalArray.append(resultIndex.filter {$0.bzrname == item.bzrname})
+            finalArray.append(array.filter {$0.bzrname == item.bzrname})
             list.append(item.bzrname)
         }
     }

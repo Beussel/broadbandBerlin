@@ -12,7 +12,7 @@ struct Result: Codable{
     var index: [Item]
 }
 
-struct Item: Codable {
+struct Item: Codable, Hashable {
     var bzrname: String
     var plrname: String
     var ein_mbit: String

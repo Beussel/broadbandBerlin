@@ -12,8 +12,8 @@ struct NetworkManager{
    // var URl: URL
     
     func getDataFromApi(bezirk: String, completion: @escaping (Result?) -> Void){
-        
-        let urlString = "https://www.berlin.de/sen/wirtschaft/wirtschaft/branchen/ikt-medien-kreativwirtschaft/breitband/privatverfuegbarkeit/alle-technologien/index.php/index/all.json?q=\(bezirk)"
+        //Ersetzt '-' mit leerzeile, da die Api keine Bindestriche akzeptiert 
+        let urlString = "https://www.berlin.de/sen/wirtschaft/wirtschaft/branchen/ikt-medien-kreativwirtschaft/breitband/privatverfuegbarkeit/alle-technologien/index.php/index/all.json?q=\(bezirk.replacingOccurrences(of: "-", with: " "))"
         let encoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         let url = URL(string: encoded!)
         if let url = url {
